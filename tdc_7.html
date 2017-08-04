@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CefSharp Example Start Page</title>
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/app.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page  tdc-detail">
+        <div class="container">
+			<div class="logo"> <img src="./images/tdc_logo.png"> </div>
+			<div class="row" id="zlogo">
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><img src="./images/tdc_head.png"></div>
+				<div class="col-md-4"></div>
+			</div>
+        </div>
+		
+        <div class="main">
+ 			<div class="main-content">
+		
+			<div class="row" id="wlsp"> 
+            <div class="col-md-3 leftpart">
+                <div class="titlepart">
+				   <h3>革镇堡<br/>木材市场</h3>
+				    <img src="./images/tiao_03.png" style="margin: 0 0 50px;">
+				</div>
+               <div class=" bodypart">
+                   <p>
+                       位于甘井子区革镇堡街道的木材市场，占地面积18万m²。铁路专用线2条，32T门式电动起重机1台，夹钳装载机2台。主要为木材客户提供接卸、仓储、加工、配送等服务，年木材接卸、仓储、加工量20余万吨。
+
+                   </p>
+                   <div class="col-md-3 leftpart" style="height: 80px;    height: 80px;width: 100%!important;position: relative;padding: 0px;">
+			     <a class="play-video-btn" href="javascript:void(0)" data-toggle="modal" data-target="#myModal" >
+                 <img src="./images/sp_07.png">
+				 </a>
+			 	 </div>
+               </div>
+               
+            </div>
+             <div class="col-md-9 rightpart" >
+                <div class="titlepart">
+
+
+				</div>
+               <div class=" bodypart">
+               
+               
+
+				<div class="gimg2">
+				<img src="./images/gimg_03.png">
+				<div style="margin-top: 1.5%;">
+				<img src="./images/gimg_06.png" class="gimg3">
+				<img src="./images/gimg_08.png" class="gimg4">
+				</div>
+
+			   </div>
+			   </div>
+            </div>     
+
+        
+           <!--  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+ 弹出视频 </button>
+ 
+           <button type="button" class="btn btn-primary btn-lg" >
+			 
+ 播放音频 </button>
+			<audio src="Audios/sample.mp3" >您的浏览器不支持 audio 标签。</audio> -->
+
+        
+		
+		
+		
+			</div>
+			</div>
+	    </div>
+		<nav id="footer" class="  navbar navbar-default navbar-fixed-bottom">
+	  <div class="container">
+		<div class="row" id="back1">
+			<div class="col-md-10"></div>            
+            <div class="col-md-1">
+            <a class="back_btn" href="javascript:void(0)" onclick="javascript:window.history.back();"> <img src="./images/back_07.png"> </a>
+             </div>
+             <div class="col-md-1">
+            <a href="index.html"> <img src="./images/back_09.png"> </a>
+            </div>
+        </div>
+	  </div>
+	</nav>
+
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		  </div>
+		  <div class="modal-body">
+			<video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
+			  <source src="Videos/sample.mp4" type="video/mp4">
+			</video>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.jplayer.min.js"></script>
+    <script src="Scripts/video.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>

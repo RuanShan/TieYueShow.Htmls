@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CefSharp Example Start Page</title>
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/app.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page tdc">
+        <div class="container">
+			<div class="logo"> <img src="./images/tdc_logo.png"> </div>
+			<div class="row" id="zlogo">
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><img src="./images/tdc_head.png"></div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+        <div class="main">
+ 			<div class="main-content  ">
+				<div class="flex-box half-height">			
+					<div class="flex-item">
+					  <a class="image-wrapper" href="tss_1.html">					  
+					    <div class="waik"><img src="./images/fw1_03.png"></div><p class="title">铁道1896花园酒店</p> 
+					  </a>
+					</div>
+					<div class="flex-item">
+					<a href="tss_2.html" class="image-wrapper" > <div class="waik"><img src="./images/fw1_05.png"></div><p>尚品槐花主题酒店</p> </a>
+					</div>
+					<div class="flex-item">
+					<a href="tss_3.html" class="image-wrapper" ><div class="waik"> <img src="./images/fw1_07.png"></div><p>锦天宾馆 </p></a>
+					</div>
+				</div>
+				<div class="flex-box half-height">
+				
+ 					<div class="flex-item">
+					<a href="tss_4.html" class="image-wrapper" > <div class="waik"><img src="./images/fw1_12.png"></div><p>锦江宾馆 </p></a>
+					</div>
+					<div class="flex-item">
+					<a href="tss_5.html" class="image-wrapper" > <div class="waik"><img src="./images/fw1_13.png"></div><p>铁道宾馆</p> </a>
+					</div>
+					<div class="flex-item">
+					<a href="tss_6.html" class="image-wrapper" > <div class="waik"><img src="./images/fw1_15.png"></div><p>大连铁路夏家河疗养院 </p></a>   
+					</div>   
+				</div>
+				
+ 			</div>
+ 			<!--  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+ 弹出视频 </button>
+ 
+           <button type="button" class="btn btn-primary btn-lg" >
+			 
+ 播放音频 </button>
+			<audio src="Audios/sample.mp3" >您的浏览器不支持 audio 标签。</audio> -->
+
+
+		
+    </div>
+	
+	<nav id="footer" class="  navbar navbar-default navbar-fixed-bottom">
+	  <div class="container">
+		<div class="row" id="back1">
+			<div class="col-md-10"></div>            
+            <div class="col-md-1">
+            <a class="back_btn" href="javascript:void(0)" onclick="javascript:window.history.back();"> <img src="./images/back_07.png"> </a>
+             </div>
+             <div class="col-md-1">
+            <a  href="index.html"> <img src="./images/back_09.png" > </a>
+            </div>
+        </div>
+	  </div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		  </div>
+		  <div class="modal-body">
+			<video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
+			  <source src="Videos/sample.mp4" type="video/mp4">
+			</video>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.jplayer.min.js"></script>
+    <script src="Scripts/video.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
