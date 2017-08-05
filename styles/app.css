@@ -60,6 +60,30 @@ img{
 	top: 50%;
 	height: 50%;
 }
+.width-1-5
+{
+	float: left;
+	width: 20%;
+}
+.grid .i-col
+{
+	padding-right: 8px;
+}
+.grid .i-col:last-child
+{
+
+}
+
+.grid .i-row
+{
+	margin-bottom: 8px;
+	margin-right: -8px;
+}
+.grid .i-row:last-child
+{
+	margin-bottom: 0;
+}
+
 
 .main-content
 {
@@ -136,6 +160,18 @@ line-height: 24px!important;
 .bodypart  img{
 }
 
+.modal .close {
+	opacity: 0.7;
+}
+.modal .close span{
+	color: #ffffff;
+}
+
+@media screen and (min-width: 1366px) {
+	.modal-dialog{
+			width: 800px;
+	}
+}
 
 .flex-box {
 	display: flex;
@@ -213,6 +249,41 @@ line-height: 24px!important;
 #fenlei img{
 	width: 100%;
 }
+#fenlei a{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	background-image: url('../images/style/btn_business.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#fenlei a.business_btn{
+	background-image: url('../images/style/btn_business.png');
+}
+#fenlei a.culture_btn{
+	background-image: url('../images/style/btn_culture.png');
+}
+#fenlei a.party_btn{
+	background-image: url('../images/style/btn_party.png');
+}
+#fenlei a.profile_btn{
+	background-image: url('../images/style/btn_profile.png');
+}
+#fenlei a.business_btn:hover{
+	background-image: url('../images/style/btn_businessh.png');
+}
+#fenlei a.culture_btn:hover{
+	background-image: url('../images/style/btn_cultureh.png');
+}
+#fenlei a.party_btn:hover{
+	background-image: url('../images/style/btn_partyh.png');
+}
+#fenlei a.profile_btn:hover{
+	background-image: url('../images/style/btn_profileh.png');
+}
+
+
 #ywbk .col-md-4{
 	text-align: center;
 }
@@ -316,7 +387,9 @@ line-height: 24px!important;
 	margin-bottom: 20px;
 }
 .waik:hover{
-	box-shadow: 0px 6px 6px;
+	border: 3px solid #0c6081;
+	border-radius: 6px;
+	box-shadow: 0 2px 2px;
 }
 #zlogo img{
 	width:100%;
@@ -359,12 +432,28 @@ line-height: 24px!important;
     margin-bottom: 2%;
 
 }
+
 .ximg2{
     float: right!important;
     margin-right: 0px!important;
 }
+/*tdc_3*/
+.width-1-2
+{
+	width: 50%;
+	padding-right: 8px;
+	float:left;
+}
+.width-2-2
+{
+	width: 50%;
+	padding-left: 8px;
+	float:left;
+}
+
 .zimg1{
-	width: 49%;
+	width: 50%;
+	padding-right: 5px;
 	float:left;
 }
 .zimg2{
@@ -480,3 +569,13 @@ line-height: 24px!important;
     box-shadow: inset -1px 1px 5px 2px #444444, inset 1px -1px 5px 2px #222222, 0 0 0px 0 #ff3333;
   }
 }
+
+/* 企业概况 css */
+.wzimg{margin-top: 20px;width: 100%;height:10%;}
+.div7{width: 70%;float: left;}
+.div3{width: 30%;float: right;margin-top:100px;}
+.imgdd{width:20%;margin:0 5% 0 5%;margin-top:80px;}
+.imgdd1{width:20%;margin:0 5% 0 5%;margin-top:30px;}
+.div3img{width:60%;margin: 30px 20px;cursor: pointer;}
+.dizhi{width:100%;text-align:center;margin-top:15%;text-align:left;}
+.dizhi b{color: #fff;font-size: 30px;}

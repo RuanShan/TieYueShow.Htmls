@@ -6,6 +6,11 @@ $(document).ready(function(){
     player.pause();
   })
   $('#myModal').on('show.bs.modal', function (e) {
+    var $icon = $('.play-audio-btn .glyphicon');
+    if($icon.hasClass('glyphicon-volume-up'))
+	  {
+      $('.play-audio-btn').trigger('click');
+    }
     player.play();
   })
 
@@ -19,10 +24,10 @@ $(document).ready(function(){
   });
 
   $('.play-audio-btn').click(function(){
-	  var $this = $(this);
+	  var $icon = $('.glyphicon',this);
 	  var audioElement = document.getElementById('audio-js');
-	  $this.toggleClass('audio-off audio-on');
-	  if($this.hasClass('audio-on'))
+	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+	  if($icon.hasClass('glyphicon-volume-up'))
 	  {
 	    audioElement.play();
 	  }else{
