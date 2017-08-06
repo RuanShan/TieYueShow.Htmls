@@ -23,6 +23,13 @@ $(document).ready(function(){
             });
   });
 
+  var text = $('.typing-ani').text();
+  var typing = new Typing("typing-ani",{
+    "typingSpeed":50,  //打字速度，数值为时间间隔（ms）
+    //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
+    });
+  typing.add(text).execute();
+
   $('.play-audio-btn').click(function(){
 	  var $icon = $('.glyphicon',this);
 	  var audioElement = document.getElementById('audio-js');
@@ -32,6 +39,7 @@ $(document).ready(function(){
 	    audioElement.play();
 	  }else{
 		  audioElement.pause();
+      typing.close();
 	  }
   })
 
@@ -48,4 +56,6 @@ $(document).ready(function(){
   	  $('#image_list .grid').fadeIn();
       }
     })
+
+
 });

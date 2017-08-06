@@ -569,7 +569,10 @@ line-height: 24px!important;
     box-shadow: inset -1px 1px 5px 2px #444444, inset 1px -1px 5px 2px #222222, 0 0 0px 0 #ff3333;
   }
 }
-
+/*动态输入*/
+.typing-ani .text{
+	display: none;
+}
 /* 企业概况 css */
 .wzimg{margin-top: 20px;width: 100%;height:10%;}
 .div7{width: 70%;float: left;}
