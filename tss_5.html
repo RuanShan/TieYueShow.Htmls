@@ -5,9 +5,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CefSharp Example Start Page</title>
+  <title>铁道宾馆</title>
   <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
@@ -44,14 +47,20 @@
 
 
             </div>
-            <div class=" bodypart">
+            <div id="image_list" class=" bodypart">
+              <div class="grid" style="display:none;">
 
-              <img src="./images/ddimg_03.png" class="jjimg1" >
+                <a href="images/tss5/i2.jpg" data-lightbox="lightbox" > <img src="./images/tss5/i2_s.png" class="jjimg1" > </a>
+                <div class="jjimg2" style="height:80%">
+                  <a href="images/tss5/i1.jpg" data-lightbox="lightbox" > <img src="./images/tss5/i1_s.png" class="ddimg"> </a>
+                </div>
+              </div>
 
-              <div class="jjimg2" style="height:80%">
-                <img src="./images/ddimg_05.png" class="ddimg">
-
-
+              <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">	<img src="images/tss5/i1.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss5/i2.jpg">	</div>
+                </div>
               </div>
             </div>
           </div>
@@ -91,7 +100,6 @@
           </div>
           <div class="modal-body">
             <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-              <source src="videos/sample.mp4" type="video/mp4"/>
               <source src="videos/sample.webm" type="video/webm"/>
             </video>
           </div>

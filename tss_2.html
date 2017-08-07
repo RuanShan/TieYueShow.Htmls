@@ -5,9 +5,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CefSharp Example Start Page</title>
+  <title>尚品槐花主体酒店</title>
   <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
@@ -41,20 +44,26 @@
           </div>
           <div class="col-md-9 rightpart" >
             <div class="titlepart">
-
-
             </div>
-            <div class=" bodypart">
-
-              <img src="./images/spimg_03.png" class="zimg1">
-
-              <div class="zimg2">
-                <img src="./images/spimg_05.png">
-                <div style="margin-top: 4.5%;">
-                  <img src="./images/spimg_08.png" class="zimg3">
-                  <img src="./images/spimg_10.png" class="zimg4">
+            <div id="image_list" class=" bodypart">
+              <div class="grid" style="display:none;">
+                <a href="images/tss2/spimg_03.png" data-lightbox="lightbox" > <img src="./images/tss2/spimg_03.png" class="zimg1"></a>
+                <div class="zimg2">
+                  <a href="images/tss2/spimg_05.png" data-lightbox="lightbox" ><img src="./images/tss2/spimg_05.png"></a>
+                  <div style="margin-top: 4.5%;">
+                    <a href="images/tss2/spimg_08.png" data-lightbox="lightbox" ><img src="./images/tss2/spimg_08.png" class="zimg3"></a>
+                    <a href="images/tss2/spimg_10.png" data-lightbox="lightbox" ><img src="./images/tss2/spimg_10.png" class="zimg4"></a>
+                  </div>
                 </div>
+              </div>
 
+              <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">	<img src="images/tss2/i1.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss2/i2.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss2/i3.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss2/i4.jpg">	</div>
+                </div>
               </div>
             </div>
           </div>
@@ -96,7 +105,6 @@
           </div>
           <div class="modal-body">
             <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-              <source src="videos/sample.mp4" type="video/mp4"/>
               <source src="videos/sample.webm" type="video/webm"/>
             </video>
           </div>

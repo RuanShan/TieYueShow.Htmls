@@ -5,9 +5,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CefSharp Example Start Page</title>
+  <title>革镇堡木材市场</title>
   <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
@@ -43,15 +46,23 @@
           <div class="col-md-9 rightpart" >
             <div class="titlepart">
             </div>
-            <div class=" bodypart">
-              <div class="gimg2">
-                <img src="./images/gimg_03.png">
+            <div id="image_list" class=" bodypart">
+              <div class="grid" style="display:none;">
+                <a href="images/tdc7/gimg_03.png" data-lightbox="lightbox" ><img src="./images/tdc7/gimg_03.png"></a>
                 <div style="margin-top: 1.5%;">
-                  <img src="./images/gimg_06.png" class="gimg3">
-                  <img src="./images/gimg_08.png" class="gimg4">
+                  <a href="images/tdc7/gimg_06.png" data-lightbox="lightbox" ><img src="./images/tdc7/gimg_06.png" class="gimg3"></a>
+                  <a href="images/tdc7/gimg_08.png" data-lightbox="lightbox" ><img src="./images/tdc7/gimg_08.png" class="gimg4"></a>
                 </div>
 
               </div>
+              <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">	<img src="images/tdc7/i1.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tdc7/i2.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tdc7/i3.jpg">	</div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -91,7 +102,6 @@
           </div>
           <div class="modal-body">
             <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-              <source src="videos/sample.mp4" type="video/mp4"/>
               <source src="videos/sample.webm" type="video/webm"/>
             </video>
           </div>

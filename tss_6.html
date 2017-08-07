@@ -5,9 +5,12 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CefSharp Example Start Page</title>
+  <title>大连铁路夏家河疗养院</title>
   <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+  <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
@@ -41,18 +44,30 @@
           </div>
           <div class="col-md-9 rightpart" >
             <div class="titlepart">
-
-
             </div>
-            <div class=" bodypart">
-              <ul class="xul">
-                <li><img src="./images/xjimg_03.png"></li>
-                <li><img src="./images/xjimg_05.png"></li>
-                <li><img src="./images/xjimg_08.png"></li>
-                <li><img src="./images/xjimg_10.png"></li>
-                <li class="ximg2"><img src="./images/xjimg_13.png"></li>
-                <img src="./images/xjimg_20.png">
-              </ul>
+            <div id="image_list" class=" bodypart">
+              <div class="grid" style="display:none;">
+                <ul class="xul">
+                  <li><a href="images/tss6/i3.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i3_s.png"> </a></li>
+                  <li><a href="images/tss6/i4.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i4_s.png"> </a></li>
+                  <li><a href="images/tss6/i1.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i1_s.png"> </a></li>
+                  <li><a href="images/tss6/i6.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i6_s.png"> </a></li>
+                  <li class="ximg2"><a href="images/tss6/i5.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i5_s.png"> </a></li>
+                  <a href="images/tss6/i2.jpg" data-lightbox="lightbox" ><img src="./images/tss6/i2_s.png"> </a>
+                </ul>
+              </div>
+
+              <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">	<img src="images/tss6/i1.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss6/i2.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss6/i3.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss6/i4.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss6/i5.jpg">	</div>
+                  <div class="swiper-slide">	<img src="images/tss6/i6.jpg">	</div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -92,7 +107,6 @@
           </div>
           <div class="modal-body">
             <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-              <source src="videos/sample.mp4" type="video/mp4"/>
               <source src="videos/sample.webm" type="video/webm"/>
             </video>
           </div>

@@ -17,7 +17,6 @@ $(document).ready(function(){
 
     player.on("ended",
         function () {
-            this.cancelFullScreen();
     });
 
     $('#myModal').on('hidden.bs.modal', function (e) {
@@ -66,7 +65,6 @@ $(document).ready(function(){
 	  autoplay : 3000,
     effect : 'fade',
   	onAutoplayStop: function(swiper){
-        alert('事件触发了;');
   	},
   	onReachEnd: function(swiper){
         //alert('到了最后一个slide');
