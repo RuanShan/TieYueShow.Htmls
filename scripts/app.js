@@ -11,6 +11,14 @@ $(document).ready(function(){
   if( $('.video-js').is('*'))
   {
     var player = videojs(document.querySelector('.video-js'));
+    player.on("play",
+        function () {
+    });
+
+    player.on("ended",
+        function () {
+            this.cancelFullScreen();
+    });
 
     $('#myModal').on('hidden.bs.modal', function (e) {
       player.pause();
