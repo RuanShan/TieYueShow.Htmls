@@ -11,6 +11,12 @@
     <link href="Styles/app.css" rel="stylesheet" type="text/css" />
   </head>
 <body>
+  <div id="preloader">
+    <div id="spinner_container">
+    <img id="spinner" src="images/lightbox/loading.gif" alt="" />
+    </div>
+  </div>
+
   <div class="page">
     <div class="container">
         <div class="row">
@@ -21,17 +27,18 @@
          </div>
 
         <div class="row" id="fenlei">
+          <div class="col-md-3">
+            <a href="1_profile.html" class="sb profile_btn ">  </a>
+          </div>
+
             <div class="col-md-3">
               <a href="1_business.html" class="sb business_btn">  </a>
             </div>
             <div class="col-md-3">
-              <a href="1_profile.html" class="sb culture_btn">  </a>
+              <a href="1_culture.html" class="sb culture_btn">  </a>
             </div>
             <div class="col-md-3">
               <a href="1_party.html" class="sb party_btn"> </a>
-            </div>
-            <div class="col-md-3">
-              <a href="1_culture.html" class="sb profile_btn ">  </a>
             </div>
         </div>
 
@@ -43,7 +50,14 @@
 
     </div>
   </div>
-	<script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+  <script src="scripts/jquery-1.9.1.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/jquery.jplayer.min.js"></script>
+  <script src="scripts/swiper.jquery.min.js"></script>
+  <script src="scripts/swiper.animate.min.js"></script>
+  <script src="scripts/video.min.js"></script>
+  <script src="scripts/lightbox.min.js"></script>
+  <script src="scripts/typing-animate.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>

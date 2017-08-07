@@ -29,8 +29,6 @@
 			$("."+this.className).append("<span class='typing-foot'>"+this.foot+"</span>");
 		}
 
-
-
 		if (this.fade == true) {
 			$(".cursor").css("transition","opacity "+this.cursorSpeed/2000+"s");
 		}
