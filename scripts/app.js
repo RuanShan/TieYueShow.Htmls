@@ -10,26 +10,42 @@ $(document).ready(function(){
 
   if( $('.video-js').is('*'))
   {
-    var player = videojs(document.querySelector('.video-js'));
-    player.on("play",
-        function () {
-    });
+    $('.play-video-btn').click(function(){
+      var player = videojs(document.querySelector('.video-js'),{
 
-    player.on("ended",
-        function () {
-    });
+        BigPlayButton: { class:'vjs-hidden'  }
+      });
+      var FullscreenToggleComponent = videojs.getComponent('FullscreenToggle');
+      //var CloseButton = videojs.getComponent('CloseButton');
+      var fullscreenToggle = new FullscreenToggleComponent(player);
+      //var closeButton = new CloseButton(player);
+      var closeButton = player.addChild( 'CloseButton');
+      player.on("play",
+          function () { console.log('play');
+      });
 
-    $('#myModal').on('hidden.bs.modal', function (e) {
-      player.pause();
+      player.on("ended",
+          function () { console.log('ended');
+      });
+      closeButton.on("click",
+          function () {
+            player.pause();
+            player.hide();
+            fullscreenToggle.trigger('click');
+      });
+
+        var $icon = $('.play-audio-btn .glyphicon');
+        if($icon.hasClass('glyphicon-volume-up'))
+    	  {
+          $('.play-audio-btn').trigger('click');
+        }
+        //player.trigger('fullscreenchange');
+        fullscreenToggle.trigger('click');
+        player.show();
+        player.play();
+
     })
-    $('#myModal').on('show.bs.modal', function (e) {
-      var $icon = $('.play-audio-btn .glyphicon');
-      if($icon.hasClass('glyphicon-volume-up'))
-  	  {
-        $('.play-audio-btn').trigger('click');
-      }
-      player.play();
-    })
+
   }
   $('#myModal').on('shown.bs.modal', function (e) {
             // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
@@ -40,38 +56,41 @@ $(document).ready(function(){
             });
   });
 
-  var text = $('.typing-ani').text();
-  var typing = new Typing("typing-ani",{
-    "typingSpeed":50,  //打字速度，数值为时间间隔（ms）
-    //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
-    });
-  typing.add(text).execute();
-
-  $('.play-audio-btn').click(function(){
-	  var $icon = $('.glyphicon',this);
-	  var audioElement = document.getElementById('audio-js');
-	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
-	  if($icon.hasClass('glyphicon-volume-up'))
-	  {
-	    audioElement.play();
-	  }else{
-		  audioElement.pause();
-      typing.close();
-	  }
-  })
-
-
-  var mySwiper = new Swiper ('.swiper-container', {
+  var swiper = new Swiper ('.swiper-container', {
 	  autoplay : 3000,
     effect : 'fade',
   	onAutoplayStop: function(swiper){
   	},
   	onReachEnd: function(swiper){
-        //alert('到了最后一个slide');
+      //alert('到了最后一个slide');
   	  $('#image_list .swiper').fadeOut();
   	  $('#image_list .grid').fadeIn();
       }
-    })
+  })
+
+
+  var audio = document.getElementById('audio-js');
+  var text = $('.typing-ani').text();
+  var typing = new Typing("typing-ani",{
+    "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
+    //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
+    });
+  typing.add(text).callback(function(){ audio.play();}).execute();
+
+  $('.play-audio-btn').click(function(){
+	  var $icon = $('.glyphicon',this);
+	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+	  if($icon.hasClass('glyphicon-volume-up'))
+	  {
+	    audio.play();
+	  }else{
+		  audio.pause();
+      typing.close();
+      swiper.slideTo(swiper.slides.length-1);
+	  }
+  })
+
+
 
 
 });
