@@ -1,2 +1,7 @@
 *.webm
 *.ogg
+.idea/encodings.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/TieYueShow.Htmls.iml
+.idea/workspace.xml
