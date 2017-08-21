@@ -7,23 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CefSharp Example Start Page</title>
     <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<body>
+  <div id="preloader">
+    <div id="spinner_container">
+    <img id="spinner" src="images/lightbox/loading.gif" alt="" />
+    </div>
+  </div>
+    <div class="page tdc">
+        <div class="container">
+			<div class="logo"> <img src="./images/tdc_logo.png"> </div>
+			<div class="row" id="zlogo">
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><img src="./images/party/party1_02.png"></div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+         
     <div class="container">
-        <div> logo </div>
+       
 
-        <div> 
-            <a href="1_1_tdc.html"> 业务板块 </a>
-            <a> 集团简介 </a>
-            <a> 党建风采 </a>
-            <a> 铁越风采 </a>
+        <div class="row" id="fenlei">
+          <div class="col-md-3">
+            <a href="1_profile.html" class="profile_btn2">  </a>
+          </div>
+
+            <div class="col-md-3">
+              <a href="1_business.html" class="business_btn2">  </a>
+            </div>
+            <div class="col-md-3">
+              <a href="1_culture.html" class="culture_btn2">  </a>
+            </div>
+            <div class="col-md-3">
+              <a href="1_party.html" class="party_btn2"> </a>
+            </div>
         </div>
 
-        <div> 
+        <!-- <div>
             <a href="index.html"> 首页 </a>
             <a class="back_btn" onclick="javascript:window.history.back();"> 返回 </a>
-        </div>
+
+        </div> -->
+
     </div>
+  
+ 			
+
+    </div>
+
+	<nav id="footer" class="  navbar navbar-default navbar-fixed-bottom">
+	  <div class="container">
+		<div class="row" >
+			<div class="col-md-10"></div>
+            <div class="col-md-1">
+            <a class="back_btn ctl_btn" href="javascript:void(0)" onclick="javascript:window.history.back();"> 返回</a>
+             </div>
+             <div class="col-md-1">
+            <a class="back-home-btn ctl_btn" href="index.html"> 首页 </a>
+            </div>
+        </div>
+	  </div>
+	</nav>
+
+
+</div>
+  <script src="scripts/jquery-1.9.1.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/jquery.jplayer.min.js"></script>
+  <script src="scripts/swiper.jquery.min.js"></script>
+  <script src="scripts/swiper.animate.min.js"></script>
+  <script src="scripts/video.min.js"></script>
+  <script src="scripts/lightbox.min.js"></script>
+  <script src="scripts/typing-animate.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
