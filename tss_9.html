@@ -36,7 +36,8 @@
             </div>
             <div class=" bodypart">
               <p class="desc typing-ani">
-                <span class="text">依托铁路车站优势，在大连站、大连北站以及哈大、丹大沿线各高铁车站开发2万余平方米站车商网，经营范围涵盖了餐饮业、食品零售业、船票、旅行服务类、旅游咨询类等方面。与大商集团、肯德基、城际之星、灵芝妹子等知名企业建立了长期合作关系。</span>
+                <span class="text">
+				依托铁路车站优势，在大连站、大连北站以及哈大、丹大沿线各高铁车站开发2万余平方米站车商网，经营范围涵盖了餐饮业、食品零售业、船票、旅行服务类、旅游咨询类等方面。与大商集团、肯德基、城际之星、灵芝妹子等知名企业建立了长期合作关系。</span>
                 </span>
               </p>
             </div>
@@ -45,15 +46,26 @@
             <div class="titlepart">
             </div>
             <div id="image_list" class=" bodypart">
-              <div class="grid" style="display:none;">
-                <a href="images/tss9/img9_03.png" data-lightbox="lightbox" > <img src="./images/tss9/img9_03.png" class=" width-1-2"> </a>
-                <div class=" width-2-2">
-                  <a href="images/tss9/img9_06.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_06.png"> </a>
-                  <div style="margin-top: 16px">
-                    <a href="images/tss9/img9_10.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_10.png" class="width-1-2"> </a>
-                    <a href="images/tss9/img9_12.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_12.png" class="width-2-2"> </a>
+              <div class="grid" style="display:none; height:100%;">
+                <div class="col-1-2-left" style="">
+                    <a href="images/tss9/img9_03.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_03.png" class="" style="width: 100%; height: 100%;"></a>
+                </div>
+
+                <div class="col-1-2-right" style="">
+                  <div class="lin-1-2-top" style="">
+                    <div  class="" style="">
+                      <a href="images/tss9/img9_06.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_06.png"class="" style="width: 100%;  height: 100%"></a>
+                    </div>
                   </div>
 
+                  <div class="lin-1-2-foot" style="">
+                    <div class="col-1-2-left" style="">
+                      <a href="images/tss9/img9_10.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_10.png" class="" style="width: 100%;  height: 100%"></a>
+                    </div>
+                    <div  class="col-1-2-right" style="">
+                      <a href="images/tss9/img9_12.png" data-lightbox="lightbox" ><img src="./images/tss9/img9_12.png" class="" style="width: 100%;  height: 100%"></a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper swiper-container">
@@ -89,6 +101,7 @@
             <a class="play-audio-btn ctl_btn" href="javascript:void(0)"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> </a>
             <audio id="audio-js" autoplay="true" class="audio-js">
               <source src="audios/male/tdc_1.mp3" type="audio/mpeg" />
+              <source src="audios/male/tdc_1.ogg" type="audio/ogg" />
             </audio>
           </div>
         </div>
@@ -99,28 +112,32 @@
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="clearfix">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
           <div class="modal-body">
             <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
               <source src="videos/sample.mp4" type="video/mp4"/>
               <source src="videos/sample.webm" type="video/webm"/>
-            </video>
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-  </div>
-  <script src="scripts/jquery-1.9.1.min.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/jquery.jplayer.min.js"></script>
-  <script src="scripts/swiper.jquery.min.js"></script>
-  <script src="scripts/swiper.animate.min.js"></script>
-  <script src="scripts/video.min.js"></script>
-  <script src="scripts/lightbox.min.js"></script>
-  <script src="scripts/typing-animate.js"></script>
-  <script src="scripts/app.js"></script>
-</body>
-</html>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.jplayer.min.js"></script>
+    <script src="scripts/swiper.jquery.min.js"></script>
+    <script src="scripts/swiper.animate.min.js"></script>
+    <script src="scripts/video.min.js"></script>
+    <script src="scripts/lightbox.min.js"></script>
+    <script src="scripts/typing-animate.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+  </html>
