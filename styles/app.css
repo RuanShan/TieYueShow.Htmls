@@ -114,6 +114,51 @@ img{
 	margin-bottom: 0;
 }
 
+.grid .col-1-2-left{
+	width:50%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+}
+
+.grid .col-1-2-right{
+	width:50%;height:100%; float:right; padding: 0 0 0 10px; overflow: hidden;
+}
+
+.grid .lin-1-2-top{
+	width:100%;height:50%; padding: 0 0 10px 0; overflow: hidden;
+}
+
+.grid .lin-1-2-foot{
+	width:100%;height:50%; padding: 10px 0 0 0; overflow: hidden;
+}
+
+.grid .col-3max-left{
+	width:60%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+}
+
+.grid .col-3max-right{
+	width:30%; height:100%; float:left;padding:0 0 0 10px; overflow: hidden;
+}
+
+.grid .col-2n-3max-right{
+	width:100%; height:50%; float:left;padding:0 0 10px 0; overflow: hidden;
+}
+
+.grid .col-3n-3max-right{
+	width:100%; height:50%; float:left;padding:10px 0 0 0; overflow: hidden;
+}
+
+.grid .col-8max-left{
+	width:60%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+}
+
+.grid .col-8max-right{
+	width:40%; height:100%; float:left;padding:0 0 0 0; overflow: hidden;
+}
+
+.grid .col-lin1-8max-right{
+	width:100%; height:25%; float:left;padding:0 0 10px 0; overflow: hidden;
+}
+
+
 
 .main-content
 {
