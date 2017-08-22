@@ -55,42 +55,44 @@ $(document).ready(function(){
                 'margin-top': modalHeight
             });
   });
+  if( $('#image_list').is('*'))
+  {
 
-  var swiper = new Swiper ('.swiper-container', {
-	  autoplay : 3000,
-    effect : 'fade',
-  	onAutoplayStop: function(swiper){
-  	},
-  	onReachEnd: function(swiper){
-      //alert('到了最后一个slide');
-  	  $('#image_list .swiper').fadeOut();
-  	  $('#image_list .grid').fadeIn();
-      }
-  })
-
-
-  var audio = document.getElementById('audio-js');
-  var text = $('.typing-ani').text();
-  var typing = new Typing("typing-ani",{
-    "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
-    //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
-    });
-  typing.add(text).callback(function(){ audio.play();}).execute();
-
-  $('.play-audio-btn').click(function(){
-	  var $icon = $('.glyphicon',this);
-	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
-	  if($icon.hasClass('glyphicon-volume-up'))
-	  {
-	    audio.play();
-	  }else{
-		  audio.pause();
-      typing.close();
-      swiper.slideTo(swiper.slides.length-1);
-	  }
-  })
+    var swiper = new Swiper ('.swiper-container', {
+  	  autoplay : 3000,
+      effect : 'fade',
+    	onAutoplayStop: function(swiper){
+    	},
+    	onReachEnd: function(swiper){
+        //alert('到了最后一个slide');
+    	  $('#image_list .swiper').fadeOut();
+    	  $('#image_list .grid').fadeIn();
+        }
+    })
 
 
+    var audio = document.getElementById('audio-js');
+    var text = $('.typing-ani').text();
+    var typing = new Typing("typing-ani",{
+      "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
+      //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
+      });
+    typing.add(text).callback(function(){ audio.play();}).execute();
 
+    $('.play-audio-btn').click(function(){
+  	  var $icon = $('.glyphicon',this);
+  	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+  	  if($icon.hasClass('glyphicon-volume-up'))
+  	  {
+  	    audio.play();
+  	  }else{
+  		  audio.pause();
+        typing.close();
+        swiper.slideTo(swiper.slides.length-1);
+  	  }
+    })
+
+
+  }
 
 });
