@@ -113,23 +113,7 @@ img{
 {
 	margin-bottom: 0;
 }
-.grid .col-1-2-left{
-	width:50%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
-}
 
-.grid .col-1-2-right{
-	width:50%;height:100%; float:right; padding: 0 0 0 10px; overflow: hidden;
-}
-
-.grid .lin-1-2-top{
-	width:100%;height:50%; padding: 0 0 10px 0; overflow: hidden; background-color: #c7254e;
-}
-
-<<<<<<< HEAD
-.grid .lin-1-2-foot{
-	width:100%;height:50%; padding: 10px 0 0 0; overflow: hidden; background-color: #1affff;
-}
-=======
 .grid .col-1-2-left{
 	width:50%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
 }
@@ -174,8 +158,6 @@ img{
 	width:100%; height:25%; float:left;padding:0 0 10px 0; overflow: hidden;
 }
 
-
->>>>>>> 442430861eab8f9b9d7f8438aa8b1d91f5a422d5
 
 .main-content
 {
@@ -857,7 +839,7 @@ line-height: 24px!important;
 	letter-spacing: 4px;
 }
 .bodypart1{
-	
+
 	right: 15px;
 	top: 100px;
 	bottom:0;
@@ -873,7 +855,7 @@ line-height: 16px!important;
     padding: 18px;
     color: #fff;
     background: #0062b0;
-   
+
 		margin: 0;
 }
 .bodypart1 h5{
