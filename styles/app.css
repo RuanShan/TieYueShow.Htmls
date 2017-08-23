@@ -281,6 +281,43 @@ a:hover{
     overflow: hidden;
 }
 
+.grid .col2-40b-right-2lin {
+    width: 100%;
+    height: 37.5%;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+}
+
+.grid .col2-80b-left {
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding: 0 10px 0 0 ;
+    overflow: hidden;
+}
+
+.grid .col2-20b-right {
+    width: 20%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.grid .lin2-25b-top-4col {
+    width: 25%;
+    height: 100%;
+    float: left;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+}
+
+.grid .col2-20b-right-1lin {
+    width: 100%;
+    height: 25%;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+}
+
 .main-content {
     position: absolute;
     left: 30px;
@@ -288,6 +325,7 @@ a:hover{
     top: 0;
     bottom: 0;
 }
+
 
 a.ctl_btn {
     background: linear-gradient(#2E9CD0, #134E90);
