@@ -72,6 +72,7 @@ $(document).ready(function(){
                 'margin-top': modalHeight
             });
   });
+  // 详细页面
   if( $('#image_list').is('*'))
   {
     var swiper = new Swiper ('.swiper-container', {
@@ -116,5 +117,18 @@ $(document).ready(function(){
       $('.typing-ani .text').show();
     }
   }
+
+  //铁越之歌
+  $('.play-tieyue-song-btn').click(function(){
+    var audio = document.getElementById('audio-js');
+    var $icon = $('.glyphicon',this);
+    $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+    if($icon.hasClass('glyphicon-volume-up'))
+    {
+      audio.play();
+    }else{
+      audio.pause();
+    }
+  })
 
 });

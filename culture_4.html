@@ -11,7 +11,7 @@
   <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
-  
+
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -47,39 +47,35 @@
       <nav id="footer" class="  navbar navbar-default navbar-fixed-bottom">
         <div class="content">
           <div class="col-md-3 leftpart">
-
+            <a class="play-video-btn ctl_btn" href="javascript:void(0)" data-toggle="modal" data-target="#myModal" >
+              <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+              <span>		视频 </span>
+            </a>
           </div>
 
           <div class="col-md-9 rightpart" >
             <div class="pull-right">
               <a class="back-btn ctl_btn" href="javascript:void(0)" onclick="javascript:window.history.back();"> 返回 </a>
               <a class="back-home-btn ctl_btn" href="index.html"> 主页  </a>
-
+              <a class="play-tieyue-song-btn play-audio-btn audio-off ctl_btn" href="javascript:void(0)"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> </a>
+              <audio id="audio-js" autoplay="true" class="audio-js">
+                <source src="audios/追逐梦想.ogg" type="audio/ogg" />
+              </audio>
             </div>
           </div>
         </div>
       </nav>
 
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="clearfix">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
-            </div>
-            <div class="modal-body">
-              <video class="video-js" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-                <source src="videos/profile.webm" type="video/webm"/>
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
+      <video class="video-js vjs-hidden" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
+        <source src="videos/追逐梦想.webm" type="video/webm"/>
+      </video>
+
+
     </div>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    
+
     <script src="Scripts/swiper.jquery.min.js"></script>
     <script src="Scripts/swiper.animate.min.js"></script>
     <script src="Scripts/video.js"></script>
