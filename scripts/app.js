@@ -107,7 +107,7 @@ $(document).ready(function(){
     	  }else{
     		  audio.pause();
           typing.close();
-          if( swiper && swiper.slides ) //集团简介页面没有swiper
+          if( swiper != null && swiper.slides ) //集团简介页面没有swiper
           {
             swiper.slideTo(swiper.slides.length-1);
           }

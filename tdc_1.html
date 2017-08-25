@@ -11,7 +11,7 @@
   <link href="Styles/animate.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css" />
   <link href="Styles/lightbox.min.css" rel="stylesheet" type="text/css" />
-  
+
   <link href="Styles/app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -105,8 +105,7 @@
             <a class="back-btn ctl_btn" href="javascript:void(0)" onclick="javascript:window.history.back();"> 返回 </a>
             <a class="back-home-btn ctl_btn" href="index.html"> 主页  </a>
             <a class="play-audio-btn ctl_btn" href="javascript:void(0)"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> </a>
-            <audio id="audio-js" class="audio-js">
-              <source src="audios/male/tdc_1.mp3" type="audio/mpeg" />
+            <audio id="audio-js" autoplay="true" class="audio-js">
               <source src="audios/male/tdc_1.ogg" type="audio/ogg" />
             </audio>
           </div>
@@ -116,14 +115,13 @@
     <!-- Modal -->
 
             <video class="video-js vjs-hidden" data-setup='{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}'>
-              <source src="videos/tdc_1.webm" type="video/webm"/>
+              <source src="videos/大连城市物流共同配送中心.webm" type="video/webm"/>
             </video>
-
 
   </div>
   <script src="scripts/jquery-1.9.1.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
-  
+
   <script src="scripts/swiper.jquery.min.js"></script>
   <script src="scripts/swiper.animate.min.js"></script>
   <script src="scripts/video.js"></script>
