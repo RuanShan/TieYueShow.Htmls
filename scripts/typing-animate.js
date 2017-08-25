@@ -23,7 +23,7 @@
 		}
 		$("."+this.className).append("<span class='typing-container'></span>");
 		$("."+this.className).append("<span class='cursor'>"+this.cursorChar+"</span>");
-		console.log($("."+this.className)[0]);
+
 		if(!!this.foot)
 		{
 			$("."+this.className).append("<span class='typing-foot'>"+this.foot+"</span>");

@@ -1,3 +1,20 @@
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+
 $(window).load(function(){
 
     $('#preloader').fadeOut(100, function() {
@@ -57,7 +74,6 @@ $(document).ready(function(){
   });
   if( $('#image_list').is('*'))
   {
-
     var swiper = new Swiper ('.swiper-container', {
   	  autoplay : 3000,
       effect : 'fade',
@@ -70,29 +86,35 @@ $(document).ready(function(){
         }
     })
 
+    // 如果没有禁止播放音频，则播放音频，显示打字效果。
+    if( $.getUrlVar('noaudio')!='1')
+    {
+      var audio = document.getElementById('audio-js');
+      var text = $('.typing-ani').text();
+      var typing = new Typing("typing-ani",{
+        "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
+        //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
+        });
+      typing.add(text).callback(function(){ audio.play();}).execute();
 
-    var audio = document.getElementById('audio-js');
-    var text = $('.typing-ani').text();
-    var typing = new Typing("typing-ani",{
-      "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
-      //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
-      });
-    typing.add(text).callback(function(){ audio.play();}).execute();
-
-    $('.play-audio-btn').click(function(){
-  	  var $icon = $('.glyphicon',this);
-  	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
-  	  if($icon.hasClass('glyphicon-volume-up'))
-  	  {
-  	    audio.play();
-  	  }else{
-  		  audio.pause();
-        typing.close();
-        swiper.slideTo(swiper.slides.length-1);
-  	  }
-    })
-
-
+      $('.play-audio-btn').click(function(){
+    	  var $icon = $('.glyphicon',this);
+    	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+    	  if($icon.hasClass('glyphicon-volume-up'))
+    	  {
+    	    audio.play();
+    	  }else{
+    		  audio.pause();
+          typing.close();
+          if( swiper && swiper.slides ) //集团简介页面没有swiper
+          {
+            swiper.slideTo(swiper.slides.length-1);
+          }
+    	  }
+      })
+    }else{
+      $('.typing-ani .text').show();
+    }
   }
 
 });

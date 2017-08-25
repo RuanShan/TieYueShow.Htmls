@@ -48,6 +48,21 @@ a:hover{
 	left:50%;
 	display:block;
 }
+#exit_btn{
+	position: fixed;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	right: -60px;
+	top:-60px;
+	background-color: red;
+	background-image: url('../images/lightbox/close.png');
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position: 25% 75%;
+	border-radius: 100%;
+
+}
 
 .page{
 	position: absolute;
@@ -259,13 +274,13 @@ a.ctl_btn:hover{
 
 }
 .bodypart p{
-line-height: 24px!important;
+	line-height: 24px!important;
     font-size: 12px!important;
     text-align: left!important;
     padding: 18px;
     color: #fff;
     background: #0062b0;
-    min-height: 300px;
+    min-height: 280px;
 		margin: 0;
 }
 .bodypart  img{
@@ -766,7 +781,7 @@ line-height: 24px!important;
 	display: none;
 }
 /* 企业概况 css */
-.wzimg{margin-top: 20px;width: 100%;height:10%;}
+.wzimg{padding: 18px;width: 100%;}
 .div7{width: 70%;float: left;}
 .div3{width: 30%;float: right;margin-top:100px;}
 .imgdd{width:20%;margin:2% 1% 0 1%;margin-top:80px;}
@@ -915,6 +930,7 @@ line-height: 24px!important;
 }
 
 .leftpartqq{
+	padding: 30px 0 0 0;
 	width: 100%;
 }
 .leftpartqq li{
@@ -925,7 +941,7 @@ line-height: 24px!important;
 }
 
 .polaroids li > div:hover{
-	transform:scale(1.1);
+	transform:scale(1.05);
 	box-shadow:0 3px 6px rgba(0,0,0,.5);
 	position: relative;
 	z-index: 5;
