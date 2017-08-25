@@ -64,14 +64,15 @@ $(document).ready(function(){
     })
 
   }
-  $('#myModal').on('shown.bs.modal', function (e) {
-            // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
-            $(this).css('display', 'block');
-            var modalHeight=$(window).height() / 2 - $('#myModal .modal-dialog').height() / 2;
-            $(this).find('.modal-dialog').css({
-                'margin-top': modalHeight
-            });
-  });
+  //垂直居中
+  //$('.culture.modal').on('shown.bs.modal', function (e) {
+  //          // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+  //          $(this).css('display', 'block');
+  //          var modalHeight=$(window).height() / 2 - $('#myModal .modal-dialog').height() / 2;
+  //          $(this).find('.modal-dialog').css({
+  //              'margin-top': modalHeight
+  //          });
+  //});
   // 详细页面
   if( $('#image_list').is('*'))
   {
@@ -119,9 +120,9 @@ $(document).ready(function(){
     }
   }
 
-  //铁越之歌
-  $('.play-tieyue-song-btn').click(function(){
-    var media = document.getElementById('audio-js');
+  //铁越之歌, 铁越文化
+  $('.play-inner-audio-btn').click(function(){
+    var media = $('audio',this)[0];
     var $icon = $('.glyphicon',this);
     $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
     if($icon.hasClass('glyphicon-volume-up'))
@@ -130,6 +131,26 @@ $(document).ready(function(){
     }else{
       media.pause();
     }
+  })
+
+  // 打开文化体系对话框
+  $('.culture.modal').on('show.bs.modal', function (e) {
+    var media = $('audio',this)[0];
+    var $button = $('.play-audio-btn', this);
+    var $icon = $('.glyphicon',this);
+    $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+    if($icon.hasClass('glyphicon-volume-up'))
+    {
+      media.play();
+    }else{
+      $button.trigger('click');
+    }
+
+  })
+  // 关闭文化体系对话框
+  $('.culture.modal').on('hide.bs.modal', function (e) {
+    var media = $('audio',this)[0];
+    media.pause();
   })
 
 });
