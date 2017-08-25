@@ -90,22 +90,23 @@ $(document).ready(function(){
     // 如果没有禁止播放音频，则播放音频，显示打字效果。
     if( $.getUrlVar('noaudio')!='1')
     {
-      var audio = document.getElementById('audio-js');
+      var media = document.getElementById('audio-js');
+      media.play();
       var text = $('.typing-ani').text();
       var typing = new Typing("typing-ani",{
         "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
         //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
         });
-      typing.add(text).callback(function(){ audio.play();}).execute();
+      typing.add(text).callback(function(){ ;}).execute();
 
       $('.play-audio-btn').click(function(){
     	  var $icon = $('.glyphicon',this);
     	  $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
     	  if($icon.hasClass('glyphicon-volume-up'))
     	  {
-    	    audio.play();
+    	    media.play();
     	  }else{
-    		  audio.pause();
+    		  media.pause();
           typing.close();
           if( swiper != null && swiper.slides ) //集团简介页面没有swiper
           {
@@ -120,14 +121,14 @@ $(document).ready(function(){
 
   //铁越之歌
   $('.play-tieyue-song-btn').click(function(){
-    var audio = document.getElementById('audio-js');
+    var media = document.getElementById('audio-js');
     var $icon = $('.glyphicon',this);
     $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
     if($icon.hasClass('glyphicon-volume-up'))
     {
-      audio.play();
+      media.play();
     }else{
-      audio.pause();
+      media.pause();
     }
   })
 
