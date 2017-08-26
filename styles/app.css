@@ -293,13 +293,27 @@ a.ctl_btn:hover{
 .culture .modal-dialog{
 
 	margin-top: 150px;
-
+	width: 600px;
 }
 .culture .modal-dialog .modal-body
 {
 	min-height: 240px;
+	padding: 0 30px 30px;
 }
-
+.culture .modal-title{
+	padding: 30px;
+	color: #0062b0;
+	font-size: 26px;
+	background-image: url(../images/tiao_03.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.culture  .modal-body h5{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 15px 0;
+}
 
 @media screen and (min-width: 1366px) {
 	.modal-dialog{
