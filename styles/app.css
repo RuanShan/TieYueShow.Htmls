@@ -127,19 +127,14 @@ a:hover{
 	bottom: 0;
 }
 /* height 1/2*/
-.height-1-2{
+.col-1-2-left{
 	width: 100%;
  	height: 50%;
 	overflow: hidden;
 	padding-bottom: 8px;
 
 }
-.height-2-2{
-	width: 100%;
- 	height: 50%;
-	overflow: hidden;
-	padding-top: 8px;
-}
+
 .width-1-5
 {
 	float: left;
@@ -157,21 +152,7 @@ a:hover{
 	width: 33.333%;
 	height: 100%;
 }
-.width-1-2
-{
-	float: left;
-	width: 50%;
-	height: 100%;
-	padding-right: 8px;
-	overflow: hidden;
-}
-.width-2-2
-{
-	width: 50%;
-	padding-left: 8px;
-	float:left;
-	height: 100%;
-}
+
 
 .grid{
 	height: 100%;
@@ -197,45 +178,57 @@ a:hover{
 	margin-bottom: 8px;
 	margin-right: -8px;
 }
+/* 一半宽度左*/
+.grid .row-1-2-left{
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-right: 8px;
+	overflow: hidden;
+}
+
+/* 一半宽度右*/
+.grid .row-1-2-right{
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-left: 8px;
+	overflow: hidden;
+}
+
 .grid .i-row:last-child
 {
 	margin-bottom: 0;
 }
 
-.grid .col-1-2-left{
-	width:50%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+/* 一半高度上*/
+.grid .col-1-2-top{
+	height:50%; width:100%; float:left;padding:0  0 8px 0; overflow: hidden;
+}
+/* 一半高度下*/
+.grid .col-1-2-bottom{
+	height:50%;width:100%; float:right; padding: 8px 0 0 0; overflow: hidden;
 }
 
-.grid .col-1-2-right{
-	width:50%;height:100%; float:right; padding: 0 0 0 10px; overflow: hidden;
-}
-
-.grid .lin-1-2-top{
-	width:100%;height:50%; padding: 0 0 10px 0; overflow: hidden;
-}
-
-.grid .lin-1-2-foot{
-	width:100%;height:50%; padding: 10px 0 0 0; overflow: hidden;
-}
 
 .grid .col-3max-left{
-	width:60%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+	width:60%; height:100%; float:left;padding:0 8px 0 0; overflow: hidden;
 }
 
 .grid .col-3max-right{
-	width:30%; height:100%; float:left;padding:0 0 0 10px; overflow: hidden;
+	width:30%; height:100%; float:left;padding:0 0 0 8px; overflow: hidden;
 }
 
 .grid .col-2n-3max-right{
-	width:100%; height:50%; float:left;padding:0 0 10px 0; overflow: hidden;
+	width:100%; height:50%; float:left;padding:0 0 8px 0; overflow: hidden;
 }
 
 .grid .col-3n-3max-right{
-	width:100%; height:50%; float:left;padding:10px 0 0 0; overflow: hidden;
+	width:100%; height:50%; float:left;padding:8px 0 0 0; overflow: hidden;
 }
 
 .grid .col-8max-left{
-	width:60%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
+	width:60%; height:100%; float:left;padding:0 8px 0 0; overflow: hidden;
 }
 
 .grid .col-8max-right{
@@ -243,7 +236,7 @@ a:hover{
 }
 
 .grid .col-lin1-8max-right{
-	width:100%; height:25%; float:left;padding:0 0 10px 0; overflow: hidden;
+	width:100%; height:25%; float:left;padding:0 0 8px 0; overflow: hidden;
 }
 
 
@@ -1052,19 +1045,6 @@ line-height: 20px!important;
       overflow: hidden;
   }
 
-  .grid .lin-1-2-top {
-      width: 100%;
-      height: 50%;
-      padding: 0 0 10px 0;
-      overflow: hidden;
-  }
-
-  .grid .lin-1-2-foot {
-      width: 100%;
-      height: 50%;
-      padding: 10px 0 0 0;
-      overflow: hidden;
-  }
 
   .grid .col-3max-left {
       width: 60%;
@@ -1124,27 +1104,22 @@ line-height: 20px!important;
  	width:50%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
   }
 
+
  .grid .col2-60b-left {
      width: 60%;
     height: 100%;
      float: left;
      padding: 0 10px 0 0 ;
      overflow: hidden;
-	 }
- .grid .col-1-2-right{
- 	width:50%;height:100%; float:right; padding: 0 0 0 10px; overflow: hidden;
-  }
-
+	}
 
  .grid .col2-40b-right {
      width: 40%;
-    height: 100%;
+     height: 100%;
      float: left;
      overflow: hidden;
 	 }
- .grid .lin-1-2-top{
- 	width:100%;height:50%; padding: 0 0 10px 0; overflow: hidden;
-  }
+
 
  .grid .lin2-25b-top {
      width: 100%;
@@ -1153,9 +1128,7 @@ line-height: 20px!important;
      padding: 0 0 10px 0;
      overflow: hidden;
 	 }
- .grid .lin-1-2-foot{
- 	width:100%;height:50%; padding: 10px 0 0 0; overflow: hidden;
-  }
+
 
  .grid .lin2-75b-foot {
      width: 100%;
@@ -1163,7 +1136,7 @@ line-height: 20px!important;
      float: left;
      /*padding: 0 0 10px 0;*/
      overflow: hidden;
-	 }
+	}
  .grid .col-3max-left{
  	width:60%; height:100%; float:left;padding:0 10px 0 0; overflow: hidden;
   }
