@@ -1215,3 +1215,85 @@ line-height: 20px!important;
     padding: 0 0 10px 0;
     overflow: hidden;
  }
+
+
+
+ /*党建风采*/
+ #fenlei a.business_btn4{
+ 	background-image: url('../images/jiandang/jdimg1_07.png');transition:all 1s;
+ }
+ #fenlei a.culture_btn4{
+ 	background-image: url('../images/jiandang/jdimg1_10.png');transition:all 1s;
+ }
+ #fenlei a.party_btn4{
+ 	background-image: url('../images/jiandang/jdimg1_12.png');transition:all 1s;
+ }
+
+ #fenlei a.business_btn4:hover{
+ 	background-image: url('../images/jiandang/jdimg_07.png');
+ }
+ #fenlei a.culture_btn4:hover{
+ 	background-image: url('../images/jiandang/jdimg_10.png');
+ }
+ #fenlei a.party_btn4:hover{
+ 	background-image: url('../images/jiandang/jdimg_12.png');
+ }
+ .titlepart2 h3{
+ 	color: #fff;
+ 	font-weight: bold;
+ 	text-align: left;
+ 	letter-spacing: 4px;
+ }
+
+ .titlepart2{
+
+ 	left: 15px;
+ 	top:0;
+ 	right: 15px;
+ 	height: 50px;
+ 	background-image: url('../images/tiao_03.png');
+ 	background-position: left bottom;
+ 	background-repeat: no-repeat;
+ 	background-size: 200px;
+ }
+ .half-p{
+ 	color:#fff;
+ 	margin: 20px 0;
+ }
+ .main-content  {
+ margin-top: 30px;
+ }
+ .jiandanglist li{
+ 	float: left;
+ 	width: 200px;
+ 	margin: 0 10px 20px 10px;
+ }
+ .jiandanglist1 li{
+ 	float: left;
+ 	width: 300px;
+ 	margin: 0 10px 20px 10px;
+ }
+ .jiandanglist2 {
+ 	width: 640px;
+ 	float: left;
+ }
+ .jiandanglist2 li{
+ 	float: left;
+ 	width: 300px;
+ 	margin: 0 10px 20px 10px;
+ }
+ .jiandanglist3{
+ 	float: left;
+ }
+ .jiandanglist3 li{
+ 	width: 200px;
+ 	margin: 0 10px 20px 10px;
+ }
+
+ .jiandanglist4{
+ 	float: left;
+ }
+ .jiandanglist4 li{
+ 	width: 150px;
+ 	margin: 0 10px 20px 10px;
+ }
