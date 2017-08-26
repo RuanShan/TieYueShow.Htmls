@@ -1094,6 +1094,7 @@ line-height: 20px!important;
      float: left;
      padding: 0 10px 0 0 ;
      overflow: hidden;
+	 }
  .grid .col-1-2-right{
  	width:50%;height:100%; float:right; padding: 0 0 0 10px; overflow: hidden;
   }
