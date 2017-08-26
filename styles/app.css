@@ -165,7 +165,18 @@ a:hover{
 	width: 100%;
 	overflow: hidden;
 }
+.height-1-4
+{
+ 	height:25%;
+	width: 100%;
+	overflow: hidden;
+}
+.height-3-4{
+	height:75%;
+	width: 100%;
+	overflow: hidden;
 
+}
 .grid{
 	height: 100%;
 }
