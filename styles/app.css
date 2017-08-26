@@ -16,6 +16,18 @@ a:hover{text-decoration:none}
 img{
 	width: 100%;
 }
+
+/*长度沾满 */
+.img-fullw{
+	width: 100%;
+	height: auto;
+}
+
+/*高度沾满*/
+.img-fullh{
+	width: auto;
+	height: 100%;
+}
 a:hover{
 	text-decoration: none;
 }
@@ -115,16 +127,18 @@ a:hover{
 	bottom: 0;
 }
 /* height 1/2*/
-.height1-2{
-	position: absolute;
-	left:0;
-	right: 0;
-	height: 50%;
+.height-1-2{
+	width: 100%;
+ 	height: 50%;
+	overflow: hidden;
+	padding-bottom: 8px;
+
 }
-.height2-2{
-	position: absolute;
-	top: 50%;
-	height: 50%;
+.height-2-2{
+	width: 100%;
+ 	height: 50%;
+	overflow: hidden;
+	padding-top: 8px;
 }
 .width-1-5
 {
@@ -148,10 +162,19 @@ a:hover{
 	float: left;
 	width: 50%;
 	height: 100%;
+	padding-right: 8px;
+	overflow: hidden;
+}
+.width-2-2
+{
+	width: 50%;
+	padding-left: 8px;
+	float:left;
+	height: 100%;
 }
 
 .grid{
-
+	height: 100%;
 }
 .grid a{
 	width: 100%;
@@ -676,19 +699,8 @@ a.ctl_btn:hover{
     top: 5.5%;
 }
 
-/*tdc_3*/
-.width-1-2
-{
-	width: 50%;
-	padding-right: 8px;
-	float:left;
-}
-.width-2-2
-{
-	width: 50%;
-	padding-left: 8px;
-	float:left;
-}
+
+
 
 .zimg1{
 	width: 50%;
@@ -1310,4 +1322,8 @@ line-height: 20px!important;
  .xiao{
  position: relative!important;
      height: 170px;
+ }
+ .jdtou{
+ 	width: 1200px;
+ 	margin: auto;
  }
