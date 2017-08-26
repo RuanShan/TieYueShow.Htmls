@@ -19,14 +19,14 @@ img{
 
 /*长度沾满 */
 .img-fullw{
-	width: 100%;
-	height: auto;
+	width: 100% !important;
+	height: auto !important;
 }
 
 /*高度沾满*/
 .img-fullh{
-	width: auto;
-	height: 100%;
+	width: auto !important;
+	height: 100% !important;
 }
 a:hover{
 	text-decoration: none;
