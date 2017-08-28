@@ -219,6 +219,7 @@ a:hover{
 {
 	margin-bottom: 8px;
 	margin-right: -8px;
+	margin-left: -8px;
 }
 /* 一半宽度左*/
 .grid .row-1-2-left{
@@ -349,7 +350,7 @@ a.ctl_btn:hover{
 	position: absolute;
 	left: 15px;
 	right: 15px;
-	top: 100px;
+	top: 80px;
 	bottom:0;
 
 }
@@ -359,12 +360,13 @@ a.ctl_btn:hover{
 	line-height: 24px!important;
     font-size: 20px!important;
     text-align: left!important;
-    padding: 18px;
+    padding: 16px;
     color: #fff;
     background: #0062b0;
     min-height: 280px;
 		margin: 0;
 }
+
 .bodypart  img{
 }
 
@@ -388,9 +390,12 @@ a.ctl_btn:hover{
   background-size: contain;
 }
 .culture  .modal-body h5{
-	font-size: 16px;
+	font-size: 22px;
 	font-weight: bold;
 	padding: 15px 0;
+}
+.culture  .modal-body p{
+	font-size: 20px;
 }
 
 @media screen and (min-width: 1366px) {
@@ -952,11 +957,7 @@ a.ctl_btn:hover{
 #fenlei a.culture_btn3:hover{
 	background-image: url('../images/tss/tss_08.png');
 }
-.rightt{
-	position: absolute;
-	right: 0px;
-	top: 100px;
-}
+
 
 
 
@@ -1019,9 +1020,9 @@ a.ctl_btn:hover{
 }
 .bodypart1 p{
 	line-height: 16px!important;
-    font-size: 12px!important;
+    font-size: 14px!important;
     text-align: left!important;
-    padding: 12px;
+    padding: 8px;
     color: #fff;
     background: #0062b0;
 
@@ -1306,6 +1307,20 @@ line-height: 20px!important;
  .main-content  {
  margin-top: 30px;
  }
+ /*文字较多*/
+ .tdc1 .main-content >.row >.leftpart{
+	  width: 30%;
+ }
+ .tdc1 .main-content >.row >.rightpart{
+	  width: 70%;
+ }
+ .tdc1 #footer .leftpart{
+	 width: 30%;
+ }
+ .tdc1 #footer .rightpart{
+	  width: 70%;
+ }
+
  .jiandanglist{
 	 height: 100%;
  }
