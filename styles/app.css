@@ -379,6 +379,10 @@ a.ctl_btn:hover{
 .profile .bodypart .desc{
 	line-height: 28px!important;
 }
+.tdc1 .bodypart .desc{
+	line-height: 24px!important;
+	padding: 16px 20px;
+}
 .tss6 .bodypart .desc{
 	line-height: 30px!important;
 }
