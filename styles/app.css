@@ -267,8 +267,6 @@ a:hover{
 	width:100%; height:75%; float:left;padding: 8px 0 0 0; overflow: hidden;
 }
 
-
-
 .grid .col-3max-left{
 	width:60%; height:100%; float:left;padding:0 8px 0 0; overflow: hidden;
 }
@@ -349,6 +347,11 @@ a.ctl_btn:hover{
 	font-weight: bold;
 	text-align: left;
 	letter-spacing: 4px;
+	background-image: url('../images/tiao_03.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding:  0 0 20px 0;
 }
 
 /*内容，可能是文字或图片*/
@@ -363,7 +366,7 @@ a.ctl_btn:hover{
 .bodypart .desc{
 
 	text-indent: 2em;
-	line-height: 24px!important;
+	line-height: 40px!important;
     font-size: 20px!important;
     text-align: left!important;
     padding: 16px;
@@ -373,6 +376,27 @@ a.ctl_btn:hover{
 		margin: 0;
 }
 
+.profile .bodypart .desc{
+	line-height: 28px!important;
+}
+.tss6 .bodypart .desc{
+	line-height: 30px!important;
+}
+.tss8 .bodypart .desc{
+	padding: 16px 26px;
+
+	line-height: 30px!important;
+}
+.tss13 .bodypart .desc{
+	line-height: 36px!important;
+	padding: 16px 20px;
+}
+.try1 .bodypart .desc{
+	line-height: 24px!important;
+}
+.try2 .bodypart .desc{
+	line-height: 26px!important;
+}
 .bodypart  img{
 }
 
@@ -879,10 +903,11 @@ a.ctl_btn:hover{
 /* 企业概况 css */
 .wzimg{padding: 18px;width: 100%;}
 .div7{width: 70%;float: left;}
-.div3{width: 30%;float: right;margin-top:100px;}
-.imgdd{width:20%;margin:2% 1% 0 1%;margin-top:80px;}
-.imgdd1{width:20%;margin:2% 1% 0 1%;}
-.div3img{width:60%;margin: 30px 20px;cursor: pointer;}
+.div3{width: 30%;float: right;margin-top:100px; text-align: center;}
+.imgdd{width:20%;margin:2% 1% 0 1%;margin-top:60px;}
+.imgdd1{width:20%;margin: 5px 1% 0 1%;}
+.div3img{width:60%;margin: 20px 20px;cursor: pointer;}
+.div3img2{width:80%; margin: 20px auto 0 auto; cursor: pointer;}
 .dizhi{width:100%;text-align:center;margin-top:15%;text-align:left;}
 .dizhi b{color: #fff;font-size: 30px;}
 
@@ -1320,11 +1345,19 @@ line-height: 20px!important;
  .tdc1 .main-content >.row >.rightpart{
 	  width: 70%;
  }
+
  .tdc1 #footer .leftpart{
 	 width: 30%;
  }
  .tdc1 #footer .rightpart{
 	  width: 70%;
+ }
+
+ .profile .main-content >.row .bodypart{
+	  top: 60px;
+ }
+ .profile .main-content >.row .titlepart{
+	  height: 60px;
  }
 
  .jiandanglist{
