@@ -353,6 +353,9 @@ a.ctl_btn:hover{
 	background-size: contain;
 	padding:  0 0 20px 0;
 }
+.profile2 .titlepart h3 {
+	font-size: 38px;
+}
 
 /*内容，可能是文字或图片*/
 .bodypart{
