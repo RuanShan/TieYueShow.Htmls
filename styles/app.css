@@ -189,6 +189,12 @@ a:hover{
 	width: 100%;
 	overflow: hidden;
 }
+.height-2-3
+{
+ 	height: 66.666%;
+	width: 100%;
+	overflow: hidden;
+}
 .height-1-4
 {
  	height:25%;
