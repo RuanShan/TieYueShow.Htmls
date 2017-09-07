@@ -120,7 +120,7 @@ $(document).ready(function(){
     }
   }
 
-  //铁越之歌, 铁越文化
+  //铁越之歌, 铁越文化  //政治建设, 旗帜引领
   $('.play-inner-audio-btn').click(function(){
     var media = $('audio',this)[0];
     var $icon = $('.glyphicon',this);

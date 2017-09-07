@@ -85,7 +85,7 @@ a:hover{
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url('../Images/bg.jpg');
+	background-image: url('../images/bg.jpg');
 	background-size: cover;
 
 }
@@ -117,7 +117,7 @@ a:hover{
 }
 .page.business
 {
-	background-image: url('../Images/biz_bg.jpg');
+	background-image: url('../images/biz_bg.jpg');
 
 }
 .content{
@@ -527,7 +527,7 @@ a.ctl_btn:hover{
 
 .tdc, .tdc-detail
 {
-	background-image: url('../Images/tdc_bg.jpg');
+	background-image: url('../images/tdc_bg.jpg');
 }
 
 .biao{
@@ -623,13 +623,13 @@ a.ctl_btn:hover{
 
 #footer .back-btn
 {
-	/*background-image: url('../Images/back_07.png');*/
+	/*background-image: url('../images/back_07.png');*/
 	background-size:contain;
 	background-repeat: no-repeat;
 }
 #footer .back-home-btn
 {
-	/*background-image: url('../Images/back_09.png')*/;
+	/*background-image: url('../images/back_09.png')*/;
 	background-size:contain;
 	background-repeat: no-repeat;
 }
@@ -637,14 +637,14 @@ a.ctl_btn:hover{
 {
 	width: 40px;
 	height: 40px;
-	/*background-image: url('../Images/sp_10.png')*/;
+	/*background-image: url('../images/sp_10.png')*/;
 	background-size:contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 #footer .play-video-btn
 {
-	/*background-image: url('../Images/sp_07.png');
+	/*background-image: url('../images/sp_07.png');
 	background-size:contain;
 	background-repeat: no-repeat;
 	*/
@@ -1364,10 +1364,15 @@ line-height: 20px!important;
  }
  .half-p{
  	color:#fff;
- 	margin: 20px 0;
+ 	margin: 10px 0;
+	font-size: 20px;
  }
+
  .main-content  {
- margin-top: 30px;
+ 	margin-top: 30px;
+ }
+ .jiandang1 .main-content  {
+ 		margin-top: 0px;
  }
  /*文字较多*/
  .tdc1 .main-content >.row >.leftpart{
