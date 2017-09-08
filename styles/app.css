@@ -436,14 +436,19 @@ a.ctl_btn:hover{
 	margin-top: 150px;
 	width: 600px;
 }
+.culture .modal-dialog .modal-content{
+
+	background-color: #0062b0;
+}
 .culture .modal-dialog .modal-body
 {
 	min-height: 240px;
 	padding: 0 30px 30px;
+	color: white;
 }
 .culture .modal-title{
 	padding: 30px;
-	color: #0062b0;
+	color: white;
 	font-size: 26px;
 	background-image: url(../images/tiao_03.png);
   background-position: center bottom;
@@ -457,6 +462,10 @@ a.ctl_btn:hover{
 }
 .culture  .modal-body p{
 	font-size: 20px;
+}
+.culture  .btn-primary{
+	color: #0062b0;
+	background-color:snow;
 }
 
 @media screen and (min-width: 1366px) {
