@@ -76,8 +76,10 @@ $(document).ready(function(){
   // 详细页面
   if( $('#image_list').is('*'))
   {
+    var autoplay = 3000;
+    if (typeof(g_autoplay) != "undefined") { autoplay = g_autoplay; }
     var swiper = new Swiper ('.swiper-container', {
-  	  autoplay : 3000,
+  	  autoplay : autoplay,
       effect : 'fade',
     	onAutoplayStop: function(swiper){
     	},
@@ -95,7 +97,7 @@ $(document).ready(function(){
       media.play();
       var text = $('.typing-ani').text();
       var typing = new Typing("typing-ani",{
-        "typingSpeed":50,  //打字速度，数值为时间间隔（ms）-1
+        "typingSpeed":80,  //打字速度，数值为时间间隔（ms）-1
         //"cursorSpeed":50, //光标闪烁速度，数值为时间间隔（ms）
         });
       typing.add(text).callback(function(){ ;}).execute();

@@ -392,6 +392,9 @@ a.ctl_btn:hover{
 	line-height: 24px!important;
 	padding: 16px 20px;
 }
+.tss1 .bodypart .desc{
+	line-height: 24px!important;
+}
 .tss6 .bodypart .desc{
 	line-height: 30px!important;
 }
