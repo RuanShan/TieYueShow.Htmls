@@ -1455,16 +1455,33 @@ line-height: 20px!important;
  }
 
  /*铁越风采 视频列表*/
+ .culture5 .main-content
+ {
+	 overflow-y: auto;
+ }
  .video-thumb{
 	 position: relative;
 	 width:20%;
 	 height:30%;
 	 float:left;
-	 background-color:#fff;
 	 text-align: center;
+	 margin: 0 0 8px 0;
  }
- .video-thumb .vjs-big-play-button{ width: 30%; height:30%; top: 35%; left:35%;}
- .video-thumb .image{ position: absolute; top: 0; bottom:30px; left:0; right: 0;}
+ .video-thumb .play-icon{
+	 position: absolute;
+	 width: 30%; height:30%; top: 35%; left:35%;
+	 z-index: 5;
+	 background-image: url('../images/play.jpg');
+	 background-size: contain;
+	 background-position: center;
+	 background-repeat: no-repeat;
+ }
+ .video-thumb .image{	 background-color:#fff;
+	 overflow: hidden;
+ 		position: absolute; top: 0; bottom:30px; left:16px; right: 16px;
+	}
+	.video-thumb .image:hover{
+		border: 3px solid #0c6081;
+	}
  .video-thumb .image img{ width: auto; height:100%; }
- .video-thumb .title{ position: absolute; height: 30px; bottom:0; left:0; right: 0; line-height:30px;background-color:#fff;}
- 
+ .video-thumb .title{ position: absolute; height: 30px; bottom:0; left:0; right: 0; line-height:30px;color:#fff;}
