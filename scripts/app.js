@@ -15,11 +15,34 @@ $.extend({
   }
 });
 
+//V1 method
+String.prototype.format = function()
+{
+    var args = arguments;
+    return this.replace(/\{(\d+)\}/g,
+        function(m,i){
+            return args[i];
+        });
+}
+
+//V2 static
+String.format = function() {
+    if( arguments.length == 0 )
+        return null;
+
+    var str = arguments[0];
+    for(var i=1;i<arguments.length;i++) {
+        var re = new RegExp('\\{' + (i-1) + '\\}','gm');
+        str = str.replace(re, arguments[i]);
+    }
+    return str;
+}
+
 $(window).load(function(){
 
     $('#preloader').fadeOut(100, function() {
                $('body').css('overflow','auto');
-               $(this).remove();
+               $(this).hide();
     });
 });
 
@@ -29,7 +52,6 @@ $(document).ready(function(){
   {
     $('.play-video-btn').click(function(){
       var player = videojs(document.querySelector('.video-js'),{
-
         BigPlayButton: { class:'vjs-hidden'  }
       });
       var FullscreenToggleComponent = videojs.getComponent('FullscreenToggle');
@@ -154,5 +176,91 @@ $(document).ready(function(){
     var media = $('audio',this)[0];
     media.pause();
   })
+  //如果是铁越风采页面
+  if($('.culture5').is('*'))
+  {
+	  var lines = ['铁越速度##videos/fengcai/sample.jpg##videos/fengcai/sample.webm'];
+	  //如果C#对象存在
+	  if (typeof(c_video_manager_async) != "undefined") {
+      $('#preloader').show();
+  		c_video_manager_async.videoFiles().then(function(res){
+  			init_video_list( lines);
+        bind_play_event();
+        $('#preloader').hide();
+  		})
+	  }else{
+      //测试使用
+      init_video_list( lines);
+      bind_play_event();
+    }
+
+  }
 
 });
+
+// params
+//   lines: a array of string , 字符串的结构  视频标题##视频缩略图路径##视频文件路径
+// 		示例: '铁越速度##videos/fengcai/sample.jpg##videos/fengcai/sample.webm'
+function init_video_list( lines)
+{
+  //
+	var template = '<div class="video-thumb">\
+        <div class="image" > <a href="javascript:void(0)" class="play-btn">    <img src="{1}" class="img-fullw"></a>\
+					<div class="video-wrap"><video class="video-js  vjs-hidden" data-setup=\'{"controls": true, "autoplay": false, "preload": "auto", "fluid": true}\'>\
+					  <source src="{2}" type="video/webm"/>\
+					</video></div>\
+				</div>\
+				<div class="title">{0}</div>\
+			</div>';
+  var $video_list =$( '.video-list').empty();//清空示例数据
+
+  for(var i=0;i<lines.length; i++)
+	{
+		var line = lines[i];
+		//铁越速度##images/play.jpg##videos/大连城市物流共同配送中心.webm
+		var combo_items = line.split('##');
+    var t = String.format( template,  combo_items[0], combo_items[1],combo_items[2]);
+    $video_list.append( t);
+	}
+}
+
+function bind_play_event()
+{
+  $('.play-btn').click(function(){
+    // <a class='play-btn'> play button </a>
+    // <video> source </video>
+    var video = $(this).next('.video-wrap').find('video')[0];
+    var player = videojs(video,{
+      controls: true,
+      autoplay: false,
+      preload: "auto",
+      fluid: true,
+      BigPlayButton: { class:'vjs-hidden'  }
+    });
+    var FullscreenToggleComponent = videojs.getComponent('FullscreenToggle');
+    //var CloseButton = videojs.getComponent('CloseButton');
+    //var closeButton = new CloseButton(player);
+    var closeButton = player.addChild( 'CloseButton');
+    //var fullscreenToggle = new FullscreenToggleComponent(player);
+
+    player.on("play",
+        function () { console.log('play');
+    });
+
+    player.on("ended",
+        function () { console.log('ended');
+    });
+    closeButton.on("click",
+        function (event) {
+          event.stopPropagation();
+          player.pause();
+          player.hide();
+          player.exitFullscreen();
+    });
+    //fullscreenToggle.trigger('click');
+    player.requestFullscreen();
+    player.currentTime(0);
+    player.show();
+    player.play();
+  })
+}
