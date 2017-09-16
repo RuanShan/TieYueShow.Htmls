@@ -157,6 +157,14 @@ $(document).ready(function(){
     }
   })
 
+  if( $('.play-inner-audio-btn').is('*'))
+  {
+      if( $.getUrlVar('noaudio')!='1')
+      {
+          $('.play-inner-audio-btn').trigger('click');
+      }
+  }
+
   // 打开文化体系对话框
   $('.culture.modal').on('show.bs.modal', function (e) {
     var media = $('audio',this)[0];
