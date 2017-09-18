@@ -1434,6 +1434,19 @@ line-height: 20px!important;
 	position: relative;
  	margin: 0 10px 20px 10px;
  }
+ .jiandanglist5 li{
+	 float: left;
+	 width: 25%;
+ 	 height: 50%;
+ 	 position: relative;
+	 padding: 0 10px 10px 10px;
+ }
+  .jiandanglist5 li.line2{
+	 padding: 10px 10px 0 10px;
+ }
+ .jiandanglist5 li img{
+	 width: auto;  height: 100%;
+ }
  .jiandanglist2 {
  	width: 640px;
  	float: left;
