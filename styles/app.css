@@ -389,14 +389,22 @@ a.ctl_btn:hover{
 	line-height: 28px!important;
 }
 .tdc1 .bodypart .desc{
+	font-size: 19px!important;
 	line-height: 24px!important;
 	padding: 16px 20px;
 }
+.tdc5 .bodypart .desc{
+	padding: 16px 26px;
+}
+
 .tss1 .bodypart .desc{
-	line-height: 24px!important;
+	font-size: 19px!important;
+  line-height: 26px!important;
+	padding: 16px 16px;
 }
 .tss6 .bodypart .desc{
 	line-height: 30px!important;
+	padding: 16px 28px;
 }
 .tss8 .bodypart .desc{
 	padding: 16px 26px;
@@ -407,13 +415,16 @@ a.ctl_btn:hover{
 	padding: 16px 20px;
 }
 .try1 .bodypart .desc{
+	font-size: 19px!important;
 	line-height: 24px!important;
 }
 .try2 .bodypart .desc{
 	line-height: 26px!important;
 }
 .jiandang6 .bodypart .desc{
-	line-height: 30px!important;
+	line-height: 28px!important;
+	font-size: 21px!important;
+	padding: 16px 26px;
 }
 .jiandang3 .bodypart .desc{
 	line-height: 30px!important;
