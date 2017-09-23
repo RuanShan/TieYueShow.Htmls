@@ -444,6 +444,12 @@ a.ctl_btn:hover{
 .zhigong1 .bodypart .desc{
 	line-height: 30px!important;
 }
+.culture2 .bodypart .desc{
+	padding: 16px 20px;
+	line-height: 24px!important;
+	font-size: 19px!important;
+}
+
 .bodypart  img{
 }
 
