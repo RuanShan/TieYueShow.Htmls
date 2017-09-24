@@ -1,3 +1,8 @@
+//展览室配置
+TieYueShow = {'indexFileName':'index.html'};
+//导视系统配置
+//TieYueShow = {'indexFileName':'index+guide.html', 'hasHomeTimer': '1'};
+
 $.extend({
   getUrlVars: function(){
     var vars = [], hash;
@@ -37,6 +42,8 @@ String.format = function() {
     }
     return str;
 }
+
+
 
 $(window).load(function(){
 
@@ -215,6 +222,11 @@ $(document).ready(function(){
 
   }
 
+  // 如果是楼层导视系统，定时15分钟，返回主页
+  if( TieYueShow.hasHomeTimer == '1' )
+  {
+    setTimeout( 'goHomePage()', 1000*60*15);
+  }
 });
 
 // params
@@ -282,4 +294,18 @@ function bind_play_event()
     player.show();
     player.play();
   })
+}
+
+// 点击主页按钮，根据当前配置连接到相应首页。
+$('.back-home-btn').on( 'click', function(e){
+  e.preventDefault();
+  window.location.href = TieYueShow.indexFileName;
+})
+
+function goHomePage()
+{
+  if( !location.href.endWith(  TieYueShow.indexFileName ))
+  {
+    $('.back-home-btn').trigger('click');
+  }
 }

@@ -60,7 +60,7 @@ a:hover{
 	left:50%;
 	display:block;
 }
-#exit_btn{
+.exit_btn{
 	position: fixed;
 	display: inline-block;
 	width: 120px;
@@ -74,7 +74,7 @@ a:hover{
 	background-position: 25% 75%;
 	border-radius: 100%;
 }
-#exit_btn:hover{
+.exit_btn:hover{
 	background-color: #D61518;
 }
 
@@ -576,6 +576,8 @@ a.ctl_btn:hover{
 }
 #fenlei{
     position: relative;
+		top: 350px;
+
 }
 #fenlei img{
 	width: 100%;
