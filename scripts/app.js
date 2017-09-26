@@ -304,7 +304,7 @@ $('.back-home-btn').on( 'click', function(e){
 
 function goHomePage()
 {
-  if( !location.href.endWith(  TieYueShow.indexFileName ))
+  if( !window.location.href.endsWith(  TieYueShow.indexFileName ))
   {
     $('.back-home-btn').trigger('click');
   }
