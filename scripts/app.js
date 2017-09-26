@@ -66,11 +66,23 @@ $(window).load(function(){
     });
     //禁止鼠标右键
      document.oncontextmenu = function(e){
-       e.preventDefault();
+       //e.preventDefault();
      }
 });
 
 $(document).ready(function(){
+
+
+  // 如果是展览系统，点击退出按钮，直接退出
+  $('#exit_btn').on('click', function (e) {
+    c_bound.onTrigger( 'exit','' );
+  })
+
+  // 如果是楼层导视系统，定时15分钟，返回主页
+  if( TieYueShow.hasHomeTimer == '1' )
+  {
+    setTimeout( 'goHomePage()', 1000*60*15);
+  }
 
   if( $('.video-js').is('*'))
   {
@@ -227,16 +239,6 @@ $(document).ready(function(){
     //}
   }
 
-  // 如果是展览系统，点击退出按钮，直接退出
-  $('#exit_btn').on('click', function (e) {
-    c_bound.onTrigger( 'exit','' );
-  })
-
-  // 如果是楼层导视系统，定时15分钟，返回主页
-  if( TieYueShow.hasHomeTimer == '1' )
-  {
-    setTimeout( 'goHomePage()', 1000*60*15);
-  }
 });
 
 // params

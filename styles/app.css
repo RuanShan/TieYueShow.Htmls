@@ -77,7 +77,11 @@ a:hover{
 .exit_btn:hover{
 	background-color: #D61518;
 }
-
+/* 调大视频关闭按钮 */
+.video-js .vjs-control.vjs-close-button
+{
+	font-size: 30px;
+}
 
 .page{
 	position: absolute;
