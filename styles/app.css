@@ -82,7 +82,11 @@ a:hover{
 {
 	font-size: 30px;
 }
-
+/* 视频全屏时，不允许调整窗口，只可以关闭*/
+.video-js .vjs-fullscreen-control
+{
+	display: none;
+}
 .page{
 	position: absolute;
 	top: 0;

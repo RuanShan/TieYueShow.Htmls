@@ -66,7 +66,7 @@ $(window).load(function(){
     });
     //禁止鼠标右键
      document.oncontextmenu = function(e){
-       //e.preventDefault();
+       e.preventDefault();
      }
 });
 
