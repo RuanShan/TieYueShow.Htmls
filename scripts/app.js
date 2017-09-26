@@ -269,7 +269,7 @@ function init_video_list( lines)
 
 function bind_play_event()
 {
-  $('.play-btn').click(function(){
+  $('.play-btn').on('click',function(){
     // <a class='play-btn'> play button </a>
     // <video> source </video>
     var video = $(this).next('.video-wrap').find('video')[0];
