@@ -1,7 +1,20 @@
-//展览室配置
-TieYueShow = {'indexFileName':'index.html'};
+//展览室配置, indexFileName 判断是否为首页，决定是否返回首页
+TieYueShow = {'indexFileName':'index.html', 'hasHomeTimer': '0'};
 //导视系统配置
-//TieYueShow = {'indexFileName':'index+guide.html', 'hasHomeTimer': '1'};
+//TieYueShow = {'indexFileName':'index.html', 'hasHomeTimer': '1'};
+
+//'铁越速度##videos/fengcai/sample.jpg##videos/fengcai/sample.webm',
+TieYueShow.videos = [
+    '感动铁越##videos/fengcai/感动铁越.jpg##videos/fengcai/01感动铁越.webm',
+    '铁越速度##videos/fengcai/铁越速度.jpg##videos/fengcai/02铁越速度.webm',
+    '拓荒者的足迹##videos/fengcai/拓荒者的足迹.jpg##videos/fengcai/03拓荒者的足迹.webm',
+    '2017年三八才艺##videos/fengcai/2017年三八才艺.jpg##videos/fengcai/sample.webm',
+    '2016年三八才艺##videos/fengcai/2016年三八才艺.jpg##videos/fengcai/052016年三八才艺展示.webm',
+    '2015年三八才艺##videos/fengcai/2015年三八才艺.jpg##videos/fengcai/062015年三八才艺展示.webm',
+    '两学一做-白总##videos/fengcai/两学一做-白总.jpg##videos/fengcai/07两学一做-白总.webm',
+    '于志斌讲课##videos/fengcai/于志斌讲课.jpg##videos/fengcai/08于志斌讲课.webm',
+    '王建臣讲课##videos/fengcai/王建臣讲课.jpg##videos/fengcai/09王建臣讲课.webm',
+  ];
 
 $.extend({
   getUrlVars: function(){
@@ -51,6 +64,10 @@ $(window).load(function(){
                $('body').css('overflow','auto');
                $(this).hide();
     });
+    //禁止鼠标右键
+     document.oncontextmenu = function(e){
+       e.preventDefault();
+     }
 });
 
 $(document).ready(function(){
@@ -194,33 +211,26 @@ $(document).ready(function(){
   //如果是铁越风采页面
   if($('.culture5').is('*'))
   {
-    //'铁越速度##videos/fengcai/sample.jpg##videos/fengcai/sample.webm',
-	  var lines = [
-        '感动铁越##videos/fengcai/感动铁越.jpg##videos/fengcai/01感动铁越.webm',
-        '铁越速度##videos/fengcai/铁越速度.jpg##videos/fengcai/02铁越速度.webm',
-        '拓荒者的足迹##videos/fengcai/拓荒者的足迹.jpg##videos/fengcai/03拓荒者的足迹.webm',
-        '2017年三八才艺##videos/fengcai/2017年三八才艺.jpg##videos/fengcai/sample.webm',
-        '2016年三八才艺##videos/fengcai/2016年三八才艺.jpg##videos/fengcai/052016年三八才艺展示.webm',
-        '2015年三八才艺##videos/fengcai/2015年三八才艺.jpg##videos/fengcai/062015年三八才艺展示.webm',
-        '两学一做-白总##videos/fengcai/两学一做-白总.jpg##videos/fengcai/07两学一做-白总.webm',
-        '于志斌讲课##videos/fengcai/于志斌讲课.jpg##videos/fengcai/08于志斌讲课.webm',
-        '王建臣讲课##videos/fengcai/王建臣讲课.jpg##videos/fengcai/09王建臣讲课.webm',
-      ];
-	  //如果C#对象存在
-	  if (typeof(c_video_manager_async) != "undefined") {
-      $('#preloader').show();
-  		c_video_manager_async.videoFiles().then(function(res){
-  			init_video_list( lines);
-        bind_play_event();
-        $('#preloader').hide();
-  		})
-	  }else{
-      //测试使用
-      init_video_list( lines);
-      bind_play_event();
-    }
 
+	  //如果C#对象存在
+	  //if (typeof(c_video_manager_async) != "undefined") {
+    //  $('#preloader').show();
+  	//	c_video_manager_async.videoFiles().then(function(res){
+  	//		init_video_list( lines);
+    //    bind_play_event();
+    //    $('#preloader').hide();
+  	//	})
+	  //}else{
+      //测试使用
+      init_video_list( TieYueShow.videos);
+      bind_play_event();
+    //}
   }
+
+  // 如果是展览系统，点击退出按钮，直接退出
+  $('#exit_btn').on('click', function (e) {
+    c_bound.onTrigger( 'exit','' );
+  })
 
   // 如果是楼层导视系统，定时15分钟，返回主页
   if( TieYueShow.hasHomeTimer == '1' )
