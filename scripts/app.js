@@ -81,7 +81,7 @@ $(document).ready(function(){
   // 如果是楼层导视系统，定时15分钟，返回主页
   if( TieYueShow.hasHomeTimer == '1' )
   {
-    setTimeout( 'goHomePage()', 1000*60*15);
+    setTimeout( 'goHomePage()', 1000*60*15);//1000*60*15
   }
 
   if( $('.video-js').is('*'))
@@ -234,7 +234,7 @@ $(document).ready(function(){
   	//	})
 	  //}else{
       //测试使用
-      init_video_list( TieYueShow.videos);
+      //init_video_list( TieYueShow.videos);
       bind_play_event();
     //}
   }
