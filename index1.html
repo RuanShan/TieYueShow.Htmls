@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>铁越集团大屏展示</title>
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/video-js.min.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/app.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/guide.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="preloader">
+    <div id="spinner_container">
+        <img id="spinner" src="images/lightbox/loading.gif" alt=""/>
+    </div>
+</div>
+
+<div class="page guide">
+  <div class="logo">
+    <img src="images/guide/logo.png" alt="Logo"/>
+  </div>
+    <div class="main">
+      <div class="main-content" style="">
+        <div id="fenlei" class="clearfix" style="top:0; width:800px;margin: 50px auto;">
+          <div class="width-1-4">
+              <a href="1_profile.html" class="sb profile_btn "> </a>
+              <div class="h50"></div>
+              <a href="1_business.html" class="sb business_btn"> </a>
+          </div>
+            <div class="width-1-2">
+              <a href="1_floors.html" class="sb floor_btn "> </a>
+            </div>
+            <div class="width-1-4">
+              <a href="1_jiandang.html" class="sb party_btn"> </a>
+              <div class="h50"></div>
+              <a href="1_culture.html" class="sb culture_btn"> </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a id="exit_with_password_btn" class="exit_btn" href="#"> 退出 </a>
+</div>
+
+
+<div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="exitModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exitModalLabel">退出铁越集团导视系统</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline">
+          <div class="form-group form-group-lg password-form-group">
+            <label for="exit_password" class="control-label">请输入退出密码:</label>
+            <input id="exit_password" type="password" class="form-control " placeholder="密码" value="">
+            <span id="helpBlock" class="help-block"> </span>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+        <button id="exit_with_password_confirm_btn" type="button" class="btn btn-primary">退出系统</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+
+<script src="scripts/swiper.jquery.min.js"></script>
+<script src="scripts/swiper.animate.min.js"></script>
+<script src="scripts/video.js"></script>
+<script src="scripts/lightbox.min.js"></script>
+<script src="scripts/typing-animate.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/guide.js"></script>
+</body>
+</html>
