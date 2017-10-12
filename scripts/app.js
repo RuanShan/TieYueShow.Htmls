@@ -174,7 +174,8 @@ $(document).ready(function(){
             swiper.slideTo(swiper.slides.length-1);
           }
     	  }
-      })
+      });
+
     }else{
       $('.typing-ani .text').show();
     }
@@ -193,6 +194,7 @@ $(document).ready(function(){
     }
   })
 
+  //缺省状态为停止状态，页面加载后，播放声音
   if( $('.play-inner-audio-btn').is('*'))
   {
       if( $.getUrlVar('noaudio')!='1')
@@ -237,6 +239,44 @@ $(document).ready(function(){
       //init_video_list( TieYueShow.videos);
       bind_play_event();
     //}
+  }
+
+  // 青春风采，图片集
+  if( $('.qingchun2').is('*'))
+  {
+    //播放完图片，音乐停止, 音乐为循环播放
+    var autoplay = 3000;
+    if (typeof(g_autoplay) != "undefined") { autoplay = g_autoplay; }
+    var swiper = new Swiper ('.swiper-container', {
+      autoplay : autoplay,
+      effect : 'fade',
+      onAutoplayStop: function(swiper){
+      },
+      onReachEnd: function(swiper){
+        //alert('到了最后一个slide');
+        $('#image_gallery .swiper').fadeOut();
+        $('#image_gallery .grid').fadeIn();
+        }
+    })
+
+    $('.play-audio-btn').click(function(){
+      var media = document.getElementById('audio-js');
+
+      var $icon = $('.glyphicon',this);
+      $icon.toggleClass('glyphicon-volume-off').toggleClass('glyphicon-volume-up');
+      if($icon.hasClass('glyphicon-volume-up'))
+      {
+        media.play();
+      }else{
+        media.pause();
+        if( swiper != null && swiper.slides ) //集团简介页面没有swiper
+        {
+          swiper.slideTo(swiper.slides.length-1);
+        }
+      }
+    })
+    $('.play-audio-btn').trigger('click');
+
   }
 
 });

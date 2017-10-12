@@ -1520,10 +1520,11 @@ line-height: 20px!important;
  	margin: auto;
  }
 
- .qingchun2 .row{
-	 padding: 5px 0 5px 0;
- }
+/*青春风采*/
 
+ .qingchun2 .main .col-md-3, .qingchun2 .main .col-md-10{
+	 padding: 0 5px 5px 5px;
+ }
  /*铁越风采 视频列表*/
  .culture5 .main-content
  {
