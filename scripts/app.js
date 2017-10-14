@@ -245,7 +245,7 @@ $(document).ready(function(){
   if( $('.qingchun2').is('*'))
   {
     //播放完图片，音乐停止, 音乐为循环播放
-    var autoplay = 3000;
+    var autoplay = 5000;
     if (typeof(g_autoplay) != "undefined") { autoplay = g_autoplay; }
     var swiper = new Swiper ('.swiper-container', {
       autoplay : autoplay,
